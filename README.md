@@ -16,16 +16,25 @@ Esta librería proporciona una colección de algoritmos de ordenamiento implemen
 *  Incluye métodos de ordenamiento como Burbuja, Selección, Inserción, Montículos y Shell Sort.
 *  Funciona tanto en proyectos de consola como en interfaces gráficas (como el JFrame que se desarrollo aqui mismo y que veremos a continuacion).
 
-## Estructura de la Librería
+                                 ## Estructura de la Librería
 
-| Método          | Tipo       | Descripción                              | Complejidad  |
-|-----------------|------------|------------------------------------------|--------------|
-| `burbuja`       | `static`   | Ordenamiento clásico por intercambio     | O(n²)        |
-| `seleccion`     | `static`   | Selecciona el menor en cada iteración    | O(n²)        |
-| `insercion`     | `static`   | Inserta elementos en posición correcta   | O(n²)        |
-| `monticulos`    | `static`   | Usa un heap para ordenar                 | O(n log n)   |
-| `shell`         | `static`   | Mejora del insertion sort con gaps       | O(n^(3/2))   |
-| `intercambiar`  | `private`  | Función auxiliar para swaps              | O(1)         |
+| Método          | Tipo       | Descripción                              |  
+|-----------------|------------|------------------------------------------|
+| `burbuja`       | `static`   | Ordenamiento clásico por intercambio     | 
+| `seleccion`     | `static`   | Selecciona el menor en cada iteración    | 
+| `insercion`     | `static`   | Inserta elementos en posición correcta   | 
+| `monticulos`    | `static`   | Usa un heap para ordenar                 | 
+| `shell`         | `static`   | Mejora del insertion sort con gaps       | 
+| `intercambiar`  | `private`  | Función auxiliar para swaps              | 
+
+
+## Estructura Detallada
+
+| Componente        | Tipo       | Parámetros                     | Retorno | Complejidad  |
+|-------------------|------------|--------------------------------|---------|--------------|
+| `burbuja(T[])`    | `static`   | `T[] arreglo` (genérico)       | `void`  | O(n²)        |
+| `seleccion(T[])`  | `static`   | `T[] arreglo`                  | `void`  | O(n²)        |
+| `heapify(T[], int, int)` | `private` | `T[] arreglo`, `n`, `i`        | `void`  | O(log n)     |
 
 --------------Explicación del código (clases, métodos, variables, validaciones)----------
 
