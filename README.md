@@ -59,8 +59,13 @@ Esta librería proporciona una colección de algoritmos de ordenamiento implemen
 1. **Crear un arreglo desordenado**:
    ```java
    Integer[] numeros = {10, 5, 8, 1, 7};
+   Ordenar con Burbuja:
+   LibreriaOrdenamiento.burbuja(numeros);
+   Imprimir resultado:
+   LibreriaOrdenamiento.imprimirArreglo(numeros);
+   Salida:
+   1 5 7 8 10
 
-  
 --------------Explicación del código (clases, métodos, variables, validaciones)----------
 
 1) Creamos un nuevo proyecto del tipo Java Class Library con el nombre LibreriaOrdenamientos
