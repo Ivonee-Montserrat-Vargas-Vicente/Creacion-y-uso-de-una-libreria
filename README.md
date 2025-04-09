@@ -5,29 +5,29 @@ Desarrollar una librería en Java que contenga métodos abstractos. Esta librer�
 El objetivo es aplicar principios de programación orientada a objetos, crear un archivo .jar, documentarlo correctamente y demostrar su uso en otro proyecto.
 
 
----A continuacion breve descripción de la librería y su propósito:---
+    ---A continuacion breve descripción de la librería y su propósito:---
 
 
-DESCRIPCION: 
+     DESCRIPCION: 
 Lenguaje: Java
 Entorno: NetBeans (exportable a JAR)
  
-PROPOSITO:
+    PROPOSITO:
 Esta librería proporciona una colección de algoritmos de ordenamiento implementados en Java, que permiten:
 *  Ordenar arrays de cualquier tipo de dato que implemente Comparable (números, strings,nbjetos).
 *  Incluye métodos de ordenamiento como Burbuja, Selección, Inserción, Montículos y Shell Sort.
 *  Funciona tanto en proyectos de consola como en interfaces gráficas (como el JFrame que se desarrollo aqui mismo y que veremos a continuacion).
 
-                                            Estructura de la Librería
+  Estructura de la Librería
 
-                         | Método          | Tipo       | Descripción                              |  
-                         |-----------------|------------|------------------------------------------|
-                         | `burbuja`       | `static`   | Ordenamiento clásico por intercambio     | 
-                         | `seleccion`     | `static`   | Selecciona el menor en cada iteración    | 
-                         | `insercion`     | `static`   | Inserta elementos en posición correcta   | 
-                         | `monticulos`    | `static`   | Usa un heap para ordenar                 | 
-                         | `shell`         | `static`   | Mejora del insertion sort con gaps       | 
-                         | `intercambiar`  | `private`  | Función auxiliar para swaps              | 
+ | Método          | Tipo       | Descripción                              |  
+ |-----------------|------------|------------------------------------------|
+ | `burbuja`       | `static`   | Ordenamiento clásico por intercambio     | 
+ | `seleccion`     | `static`   | Selecciona el menor en cada iteración    | 
+ | `insercion`     | `static`   | Inserta elementos en posición correcta   | 
+ | `monticulos`    | `static`   | Usa un heap para ordenar                 | 
+ | `shell`         | `static`   | Mejora del insertion sort con gaps       | 
+ | `intercambiar`  | `private`  | Función auxiliar para swaps              | 
 
 
 ## Estructura Detallada
