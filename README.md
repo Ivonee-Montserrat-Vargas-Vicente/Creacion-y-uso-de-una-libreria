@@ -29,6 +29,7 @@ Esta librería proporciona una colección de algoritmos de ordenamiento implemen
  | `shell`         | `static`   | Mejora del insertion sort con gaps       |T[] arreglo (genérico)  |void     |
  | `intercambiar`  | `private`  | Función auxiliar para swaps              |T[] arreglo, int i, int j|void     |
  |`heapify`        |`private`   |Función auxiliar para Heap Sort (construye/mantiene el montículo)|T[] arreglo, int n, int i|void|
+ |`imprimirArreglo`|`static`    |Imprime los elementos de un arreglo (para depuración)|T[] arreglo (genérico)|void|
 
 ## Estructura Detallada
 
@@ -43,6 +44,21 @@ Esta librería proporciona una colección de algoritmos de ordenamiento implemen
 - `intercambiar()`: Intercambia dos elementos
   ```java
   private void intercambiar(T[] arr, int i, int j)
+
+##   Especificaciones Técnicas Adicionales
+
+|Característica	|        Detalle     |
+|-------------------|--------------------|
+|Tipo Genérico	     |<T extends Comparable<T>> (Acepta cualquier objeto que implemente Comparable)|
+|Manejo de Errores	|Validación implícita mediante compareTo (no acepta null)|
+|Uso en JFrame	     |Conversión de String a Integer[] con manejo de excepciones|
+
+## 💻 Ejemplo de Uso
+
+###  Ordenamiento Básico
+1. **Crear un arreglo desordenado**:
+   ```java
+   Integer[] numeros = {10, 5, 8, 1, 7};
 
   
 --------------Explicación del código (clases, métodos, variables, validaciones)----------
