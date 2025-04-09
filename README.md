@@ -20,23 +20,23 @@ Esta librería proporciona una colección de algoritmos de ordenamiento implemen
 
  ## Estructura de la Librería
 
- | Método          | Tipo       | Descripción                              |  
- |-----------------|------------|------------------------------------------|
- | `burbuja`       | `static`   | Ordenamiento clásico por intercambio     | 
- | `seleccion`     | `static`   | Selecciona el menor en cada iteración    | 
- | `insercion`     | `static`   | Inserta elementos en posición correcta   | 
- | `monticulos`    | `static`   | Usa un heap para ordenar                 | 
- | `shell`         | `static`   | Mejora del insertion sort con gaps       | 
- | `intercambiar`  | `private`  | Función auxiliar para swaps              | 
-
+ | Método          | Tipo       | Descripción                              | Parametros             | Retorno | 
+ |-----------------|------------|------------------------------------------|------------------------|---------|
+ | `burbuja`       | `static`   | Ordenamiento clásico por intercambio     |T[] arreglo (genérico)  |void     |
+ | `seleccion`     | `static`   | Selecciona el menor en cada iteración    |T[] arreglo (genérico)  |void     |
+ | `insercion`     | `static`   | Inserta elementos en posición correcta   |T[] arreglo (genérico)  |void     |
+ | `monticulos`    | `static`   | Usa un heap para ordenar                 |T[] arreglo (genérico)  |void     |
+ | `shell`         | `static`   | Mejora del insertion sort con gaps       |T[] arreglo (genérico)  |void     |
+ | `intercambiar`  | `private`  | Función auxiliar para swaps              |T[] arreglo, int i, int j|void     |
+ |`heapify`        |`private`   |Función auxiliar para Heap Sort (construye/mantiene el montículo)|T[] arreglo, int n, int i|void|
 
 ## Estructura Detallada
 
-| Componente        | Tipo       | Parámetros                     | Retorno | Complejidad  |
-|-------------------|------------|--------------------------------|---------|--------------|
-| `burbuja(T[])`    | `static`   | `T[] arreglo` (genérico)       | `void`  | O(n²)        |
-| `seleccion(T[])`  | `static`   | `T[] arreglo`                  | `void`  | O(n²)        |
-| `heapify(T[], int, int)` | `private` | `T[] arreglo`, `n`, `i`        | `void`  | O(log n)     |
+| Componente        | Tipo       | Parámetros                     | Retorno | 
+|-------------------|------------|--------------------------------|---------|
+| `burbuja(T[])`    | `static`   | `T[] arreglo` (genérico)       | `void`  | 
+| `seleccion(T[])`  | `static`   | `T[] arreglo`                  | `void`  |
+| `heapify(T[], int, int)` | `private` | `T[] arreglo`, `n`, `i`        | `void`  | 
 
 
 ###  Métodos Privados
