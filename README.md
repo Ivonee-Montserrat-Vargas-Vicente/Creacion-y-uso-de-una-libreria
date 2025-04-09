@@ -53,18 +53,26 @@ Esta librería proporciona una colección de algoritmos de ordenamiento implemen
 |Manejo de Errores	|Validación implícita mediante compareTo (no acepta null)|
 |Uso en JFrame	     |Conversión de String a Integer[] con manejo de excepciones|
 
-## 💻 Ejemplo de Uso
+##  Ejemplo de Uso
 
 ###  Ordenamiento Básico
 1. **Crear un arreglo desordenado**:
    ```java
    Integer[] numeros = {10, 5, 8, 1, 7};
-   Ordenar con Burbuja:
+        Ordenar con Burbuja:
    LibreriaOrdenamiento.burbuja(numeros);
-   Imprimir resultado:
+       Imprimir resultado:
    LibreriaOrdenamiento.imprimirArreglo(numeros);
-   Salida:
+       Salida:
    1 5 7 8 10
+### Ordenamiento con Heap Sort:
+1. **Usando palabras**:
+   ```java
+   String[] palabras = {"zapato", "árbol", "banana"};
+   LibreriaOrdenamiento.monticulos(palabras);
+   LibreriaOrdenamiento.imprimirArreglo(palabras);
+        salida:
+   árbol banana zapato  
 
 --------------Explicación del código (clases, métodos, variables, validaciones)----------
 
