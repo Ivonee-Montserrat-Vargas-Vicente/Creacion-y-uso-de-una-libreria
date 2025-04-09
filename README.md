@@ -5,7 +5,7 @@ Desarrollar una librería en Java que contenga métodos abstractos. Esta librer�
 El objetivo es aplicar principios de programación orientada a objetos, crear un archivo .jar, documentarlo correctamente y demostrar su uso en otro proyecto.
 
 
-    ---A continuacion breve descripción de la librería y su propósito:---
+---A continuacion breve descripción de la librería y su propósito:---
 
 
      DESCRIPCION: 
@@ -18,7 +18,7 @@ Esta librería proporciona una colección de algoritmos de ordenamiento implemen
 *  Incluye métodos de ordenamiento como Burbuja, Selección, Inserción, Montículos y Shell Sort.
 *  Funciona tanto en proyectos de consola como en interfaces gráficas (como el JFrame que se desarrollo aqui mismo y que veremos a continuacion).
 
-  Estructura de la Librería
+ ## Estructura de la Librería
 
  | Método          | Tipo       | Descripción                              |  
  |-----------------|------------|------------------------------------------|
