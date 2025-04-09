@@ -3,6 +3,8 @@
 Instrucciones Generales:
 Desarrollar una librería en Java que contenga métodos abstractos. Esta librería deberá ser funcional, clara y reutilizable.
 El objetivo es aplicar principios de programación orientada a objetos, crear un archivo .jar, documentarlo correctamente y demostrar su uso en otro proyecto.
+
+
 -------------A continuacion breve descripción de la librería y su propósito:--------
 DESCRIPCION: 
 Lenguaje: Java
@@ -13,6 +15,17 @@ Esta librería proporciona una colección de algoritmos de ordenamiento implemen
 *  Ordenar arrays de cualquier tipo de dato que implemente Comparable (números, strings,nbjetos).
 *  Incluye métodos de ordenamiento como Burbuja, Selección, Inserción, Montículos y Shell Sort.
 *  Funciona tanto en proyectos de consola como en interfaces gráficas (como el JFrame que se desarrollo aqui mismo y que veremos a continuacion).
+
+## Estructura de la Librería
+
+| Método          | Tipo       | Descripción                              | Complejidad  |
+|-----------------|------------|------------------------------------------|--------------|
+| `burbuja`       | `static`   | Ordenamiento clásico por intercambio     | O(n²)        |
+| `seleccion`     | `static`   | Selecciona el menor en cada iteración    | O(n²)        |
+| `insercion`     | `static`   | Inserta elementos en posición correcta   | O(n²)        |
+| `monticulos`    | `static`   | Usa un heap para ordenar                 | O(n log n)   |
+| `shell`         | `static`   | Mejora del insertion sort con gaps       | O(n^(3/2))   |
+| `intercambiar`  | `private`  | Función auxiliar para swaps              | O(1)         |
 
 --------------Explicación del código (clases, métodos, variables, validaciones)----------
 
