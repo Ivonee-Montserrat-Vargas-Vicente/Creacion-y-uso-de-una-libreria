@@ -74,13 +74,14 @@ Esta librería proporciona una colección de algoritmos de ordenamiento implemen
         salida:
    árbol banana zapato  
 
---------------Explicación del código (clases, métodos, variables, validaciones)----------
+   Explicación del código (clases, métodos, variables, validaciones)
 
 1) Creamos un nuevo proyecto del tipo Java Class Library con el nombre LibreriaOrdenamientos
 2) ![Captura de pantalla 2025-04-08 164727](https://github.com/user-attachments/assets/f22d7e21-218f-42c2-99b6-4bf62c8920fc)
 3) dentro de la libreria contiene todos los algoritmos de ordenamiento implementados como métodos estáticos y genéricos cuando decimos genéricos se refiere a que (<T>): Usa <T extends Comparable<T>> para garantizar que los elementos sean comparables (por ejemplo pueden ser Integer, String, etc.). e inicamos con los metodos de ordenamiento.
+   
 4) BURBUJA :
-    ![Captura de pantalla 2025-04-08 165747](https://github.com/user-attachments/assets/d44a7f1c-1b40-4875-8593-b6d732d4d1be)
+   
 * En la primer linea de codigo <T extends Comparable<T>>: Lo que hace es que acepta un arreglo de cualquier tipo T que pueda ser comparado (ejemplo: Integer, String) hace que los elementos se compararen entre sí T[] arreglo: es el arreglo que le vamos a pasar 
 * En la linea siguiente n almacena el número de elementos en el arreglo si por ejemplo tenemos = [5, 2, 9], entonces n = 3 tambien contamos con un bucle (for (int i = 0; i < n - 1; i++)): se ejecuta n - 1 veces (ej: para 3 elementos, hace 2 pasadas) y con el otro bucle interno (for (int j = 0; j < n - i - 1; j++)): compara elementos cada que pasa.
 n - i - 1 reduce el rango en cada iteración.
