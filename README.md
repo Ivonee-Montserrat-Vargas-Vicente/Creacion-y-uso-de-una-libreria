@@ -38,6 +38,13 @@ Esta librería proporciona una colección de algoritmos de ordenamiento implemen
 | `seleccion(T[])`  | `static`   | `T[] arreglo`                  | `void`  | O(n²)        |
 | `heapify(T[], int, int)` | `private` | `T[] arreglo`, `n`, `i`        | `void`  | O(log n)     |
 
+
+###  Métodos Privados
+- `intercambiar()`: Intercambia dos elementos
+  ```java
+  private void intercambiar(T[] arr, int i, int j)
+
+  
 --------------Explicación del código (clases, métodos, variables, validaciones)----------
 
 1) Creamos un nuevo proyecto del tipo Java Class Library con el nombre LibreriaOrdenamientos
