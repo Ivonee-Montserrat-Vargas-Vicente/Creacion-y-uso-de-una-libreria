@@ -250,14 +250,14 @@ Si un hijo es mayor que el padre, actualiza largest.
 **Intercambio y recursión:** Si el mayor no es el padre **(largest != i)** , intercambia los valores.
 Llama a heapify recursivamente en el subárbol afectado (para mantener la propiedad del heap).
 
-         **Ejemplo:**
-Arreglo inicial: **[3, 8, 2, 10, 5]**
-Construir heap máximo:
-resultante: **[10, 8, 2, 3, 5]** (donde 10 es la raíz).
-Extraer máximos: Intercambia 10 y 5 → **[5, 8, 2, 3, 10]** (10 ya está ordenado).
-Re-heapify **[5, 8, 2, 3]** → **[8, 5, 2, 3].**
-Intercambia 8 y 3 → **[3, 5, 2, 8, 10].**
-Repite hasta obtener **[2, 3, 5, 8, 10].**
+         EJEMPLO:
+1) Arreglo inicial: **[3, 8, 2, 10, 5]**
+2) Construir heap máximo:
+3) resultante: **[10, 8, 2, 3, 5]** (donde 10 es la raíz).
+4) Extraer máximos: Intercambia 10 y 5 → **[5, 8, 2, 3, 10]** (10 ya está ordenado).
+5) Re-heapify **[5, 8, 2, 3]** → **[8, 5, 2, 3].**
+6) Intercambia 8 y 3 → **[3, 5, 2, 8, 10].**
+7) Repite hasta obtener **[2, 3, 5, 8, 10].**
 
 
 ### METODO DE ORDENAMIENTO SHELL:
@@ -298,15 +298,15 @@ Si el elemento a distancia gap es mayor, lo desplaza a la posición j: **arreglo
 **arreglo[j] = temp;**
 Coloca temp en la posición donde ya no hay elementos mayores anteriores (según el gap actual).
 
-       **Ejemplo:**
-Arreglo inicial: [12, 34, 54, 2, 3]
-gap inicial: 5 / 2 = 2
+       EJEMPLO:
+1) Arreglo inicial: [12, 34, 54, 2, 3]
+   gap inicial: 5 / 2 = 2
 
-Subarreglos con gap=2: [12, 54, 3] y [34, 2]
-Ordenamiento por inserción en cada subarreglo: [3, 12, 54] y [2, 34]
-Arreglo parcial: [3, 2, 12, 34, 54]
-gap=1 : Ordena el arreglo completo.
-Resultado final: [2, 3, 12, 34, 54]
+2) Subarreglos con gap=2: [12, 54, 3] y [34, 2]
+3) Ordenamiento por inserción en cada subarreglo: [3, 12, 54] y [2, 34]
+4) Arreglo parcial: [3, 2, 12, 34, 54]
+5) gap=1 : Ordena el arreglo completo.
+6) Resultado final: [2, 3, 12, 34, 54]
  
 
 
