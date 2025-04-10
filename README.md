@@ -260,7 +260,7 @@ Llama a heapify recursivamente en el subárbol afectado (para mantener la propie
 7) Repite hasta obtener **[2, 3, 5, 8, 10].**
 
 
-### METODO DE ORDENAMIENTO SHELL:
+   ### METODO DE ORDENAMIENTO SHELL:
     ```java
         public static <T extends Comparable<T>> void shell(T[] arreglo) {
         int n = arreglo.length;
@@ -321,6 +321,8 @@ Coloca temp en la posición donde ya no hay elementos mayores anteriores (según
         }
         System.out.println();
     }
+
+    
 1) Método intercambiar(T[] arreglo, int i, int j)
    **private static <T> void intercambiar(T[] arreglo, int i, int j) {
     T temp = arreglo[i];  // Paso 1
@@ -343,13 +345,7 @@ Ejemplo: temp = 3, entonces arreglo[1] = 3.
 Resultado final: **[5, 3, 1]**
 
 3) **imprimirArreglo(T[] arreglo)** 
-**public static <T> void imprimirArreglo(T[] arreglo) {
-    for (T elemento : arreglo) {  // Paso 1
-        System.out.print(elemento + " ");  // Paso 2
-    }
-    System.out.println();  // Paso 3
-}**
-Imprime los elementos de un arreglo genérico en la consola, separados por espacios. Útil para depurar o verificar el ordenamiento.
+   Imprime los elementos de un arreglo genérico en la consola, separados por espacios. Útil para depurar o verificar el ordenamiento.
 
  
 
