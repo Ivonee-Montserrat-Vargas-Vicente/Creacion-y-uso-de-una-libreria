@@ -343,6 +343,14 @@ Sobrescribe el elemento en la posición i con el valor del elemento en la posici
 5) **imprimirArreglo(T[] arreglo)** 
    Imprime los elementos de un arreglo genérico en la consola, separados por espacios. Útil para depurar o verificar el ordenamiento.
 
+#  Cómo Importar la Librería `.JAR` en Otro Proyecto
+
+##  Requisitos Previos
+- Archivo `LibreriaOrdenamiento.jar` generado
+- IDE Java (NetBeans, Eclipse, IntelliJ) o JDK instalado
+
+## Método 1: Usando NetBeans 
+
 
 
 
