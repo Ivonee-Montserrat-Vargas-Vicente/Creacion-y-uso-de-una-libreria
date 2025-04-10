@@ -349,8 +349,58 @@ Sobrescribe el elemento en la posición i con el valor del elemento en la posici
 - Archivo `LibreriaOrdenamiento.jar` generado
 - IDE Java (NetBeans, Eclipse, IntelliJ) o JDK instalado
 
-## Método 1: Usando NetBeans 
-1) 
+## Método 1 : Usando NetBeans 
+1) Usando NetBeans lo mas importante es ya contar con nuestra libreria creada antes de mostrar como importarla les explicare como se crea el .jar
+2) Desde nuestro proyecto de tipo javalibrary crear una clase para tener nuestros metodos y al finalizar y verificar que este correcrto nuestros metodos vamos a hacer lo siguiente
+3)  Click derecho sobre nuestra libreria y salen las opciones siguientes :
+   - New
+   - Build
+   - `Clean and Build `
+   - Clean
+   - Generate Javadoc
+4) La opcion que seleccionaremos es `Clean and Build ` y correra y aparecera :
+   ## Detalles del build
+   - **Directorio creado**:  
+     `C:\Users\ivone\OneDrive\Documentos\NetBeansProjects\LibreriaOrdenamientos\dist`
+   - **Archivo JAR generado**:  
+     `C:\Users\ivone\OneDrive\Documentos\NetBeansProjects\LibreriaOrdenamientos\dist\LibreriaOrdenamientos.jar`
+
+   ## Ejecución desde línea de comandos
+    ```bash
+     "C:\Program Files\Java\jdk-23\bin\java" -cp "C:\Users\ivone\OneDrive\Documentos\NetBeansProjects\LibreriaOrdenamientos\dist\LibreriaOrdenamientos.jar" PruebaLibreriaOrdenamiento
+     
+5)Notas importantes
+El archivo JAR se generó correctamente en la carpeta dist/
+Para distribuir tu librería, solo necesitas compartir el archivo .jar
+El tiempo de compilación fue de solo 3 segundos 
+## Importar teniendo ya el .jar generado 
+1) Crea un proyecto nuevo en la pestaña de la superior de tipo Java Application
+   - Darle NEXT
+   - Ponerle nombre al proyecto en este caso de ejemplo yo le pondre  `PruebaOrdenamiento`
+2) Ya creado dentro del proyecto tenemos estas opciones
+   - Source Packages
+   - Test Packages
+   - `Libraries`
+   - Test Libraries
+3) Seleccionamos  `Libraries` click derecho y apareceran estas opciones :
+   - Add Project
+   - Add Library
+   - `Add JAR/Folder`
+   - Properties
+4) Elegimos `Add JAR/Folder` nos va a dirigir a nuestros documentos desde una ventana en netbeans como sugerencia tenerlo en `Escritorio` ya que es mas facil de localizar , la seleccionamos y se agrega automaticamente a nuestro proyecto creado
+## Método 2 : Usando NetBeans
+   1) Ya creado nuestro .jar una alternativa es que puedes arrastrar el JAR directamente a otros proyectos NetBeans para importarlo fácilmente.
+## Metodo 3: Instalar en repositorio local:
+mvn install:install-file \
+   -Dfile=LibreriaOrdenamiento.jar \
+   -DgroupId=com.milibreria \
+   -DartifactId=ordenamiento \
+   -Dversion=1.0 \
+   -Dpackaging=jar
+   
+   
+
+   
 
 
 
