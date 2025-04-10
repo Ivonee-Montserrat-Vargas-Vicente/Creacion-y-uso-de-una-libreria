@@ -76,11 +76,12 @@ Esta librería proporciona una colección de algoritmos de ordenamiento implemen
 
   ### Explicación del código (clases, métodos, variables, validaciones)
 
-1) Creamos un nuevo proyecto del tipo Java Class Library con el nombre LibreriaOrdenamientos
-2)![Captura de pantalla 2025-04-08 164727](https://github.com/user-attachments/assets/f22d7e21-218f-42c2-99b6-4bf62c8920fc)
-3) dentro de la libreria contiene todos los algoritmos de ordenamiento implementados como métodos estáticos y genéricos cuando decimos genéricos se refiere a que (<T>): Usa <T extends Comparable<T>> para garantizar que los elementos sean comparables (por ejemplo pueden ser Integer, String, etc.). e inicamos con los metodos de ordenamiento.
+1) Creamos un nuevo proyecto del tipo Java Class Library con el nombre **LibreriaOrdenamiento**
+2) ![Captura de pantalla 2025-04-08 164727](https://github.com/user-attachments/assets/2b33dbc2-3593-4c75-98b9-f9ffd5dc864d)
+
+3) dentro de la libreria contiene todos los algoritmos de ordenamiento implementados como métodos **estáticos** y **genéricos** cuando decimos genéricos se refiere a que (<T>): Usa <T extends Comparable<T>> para garantizar que los elementos sean comparables (por ejemplo pueden ser Integer, String, etc.). e inicamos con los metodos de ordenamiento.
    
-4) ### ORDENAMIENTO POR METODO BURBUJA:
+   ### ORDENAMIENTO POR METODO BURBUJA:
    ```java
    public static <T extends Comparable<T>> void burbuja(T[] arreglo) {
         int n = arreglo.length;
@@ -94,49 +95,161 @@ Esta librería proporciona una colección de algoritmos de ordenamiento implemen
     }
    
 1) En la primer linea de codigo
-  **<T extends Comparable<T>>:**:
+  **<T extends Comparable<T>>:**
    Lo que hace es que acepta un arreglo de cualquier tipo T que pueda ser comparado (ejemplo: Integer, String) esto hace que los elementos se compararen entre sí
    T[] arreglo: es el arreglo que le vamos a pasar 
-* En la linea siguiente n almacena el número de elementos en el arreglo si por ejemplo tenemos = [5, 2, 9], entonces n = 3 tambien contamos con un bucle el cual es
+2) En la linea siguiente n almacena el número de elementos en el arreglo si por ejemplo tenemos = [5, 2, 9], entonces n = 3 tambien contamos con un bucle el cual es
  **(for (int i = 0; i < n - 1; i++)):** se ejecuta n - 1 veces
  (ejemplo: para 3 elementos, hace 2 pasadas) y con el otro bucle interno **(for (int j = 0; j < n - i - 1; j++)):** compara elementos cada que pasa.
  lo que hace n - i - 1 es que reduce el rango en cada iteración.
-* En las siguientes lineas hace una Comparación
-  **(if (arreglo[j].compareTo(arreglo[j + 1]) > 0)):** aqui se usa compareTo() para verificar si el elemento actual (arreglo[j]) es mayor que el siguiente (arreglo[j + 1]) en dado caso que si lo que hace compareTo() es retornar > 0, significa que arreglo[j] es mayor.
-5) SELECCION :
-   ![image](https://github.com/user-attachments/assets/9015002a-90d4-4d91-abb5-67ab958a620a)
-* Este otro método es el de ordenamiento por selección, que funciona dividiendo el arreglo en dos partes una parte ordenada al inicio y una parte sin ordenar (el resto) en cada iteración, encuentra el elemento más pequeño de la parte sin ordenar y lo coloca al final de la parte ordenada.
-* int n = arreglo.length; n: Tamaño del arreglo hace que recorre el arreglo desde la posición 0 hasta n-1
-* for (int i = 0; i < n - 1; i++) {
-  int minIndex = i; Suponemos que el elemento más pequeño está en la posición i (inicialmente 0).
-  i: marca el inicio de la parte no ordenada.
-* for (int j = i + 1; j < n; j++) { --j: Recorre la parte no ordenada (desde i+1 hasta n-1).
-    if (arreglo[j].compareTo(arreglo[minIndex]) < 0) {--compareTo: Compara el elemento actual con el mínimo actual.
-        minIndex = j }}
+3) En las siguientes lineas hace una Comparación
+  **(if (arreglo[j].compareTo(arreglo[j + 1]) > 0)):** aqui se usa compareTo() para verificar si el elemento actual (arreglo[j]) es mayor que el siguiente (arreglo[j + 1]) en dado caso que si lo que hace compareTo() es retornar > 0, significa que arreglo[j] es mayor y finaliza.
+   
+   ### METODO DE ORDENAMIENTO POR SELECCION :
+    ```java
+    public static <T extends Comparable<T>> void seleccion(T[] arreglo) {
+        int n = arreglo.length;
+        for (int i = 0; i < n - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < n; j++) {
+                if (arreglo[j].compareTo(arreglo[minIndex]) < 0) {
+                    minIndex = j;
+                }
+            }
+            intercambiar(arreglo, i, minIndex);
+        }
+    }
+
+Este otro método es el de ordenamiento por selección, que funciona dividiendo el arreglo en dos partes una parte ordenada al inicio y una parte sin ordenar (el resto) en cada iteración, encuentra el elemento más pequeño de la parte sin ordenar y lo coloca al final de la parte ordenada.
+
+1) **int n = arreglo.length; n:** Tamaño del arreglo hace que recorre el arreglo desde la posición 0 hasta n-1
+2) **for (int i = 0; i < n - 1; i++)
+    {   int minIndex = i;**
+ Suponemos que el elemento más pequeño está en la posición i (inicialmente 0).
+3) **i:** marca el inicio de la parte no ordenada.
+4) **for (int j = i + 1; j < n; j++) { --j:**
+   Recorre la parte no ordenada (desde i+1 hasta n-1).
+5) **if (arreglo[j].compareTo(arreglo[minIndex]) < 0)**
+6) **compareTo:** Compara el elemento actual con el mínimo actual.
+7) **minIndex = j }}**
   si arreglo[j] es menor, actualiza minIndex = j.
-* intercambiar(arreglo, i, minIndex);
+8) **intercambiar(arreglo, i, minIndex);**
  intercambiar: Coloca el elemento más pequeño encontrado (arreglo[minIndex]) en su posición correcta (i).
- El elemento en i ahora está ordenado la parte ordenada crece de izquierda a derecha.
-6) INSERCION:
-  ![image](https://github.com/user-attachments/assets/d4c67267-75aa-4578-a3dd-bd2966d95be5)
-* Este método implementa el algoritmo de ordenamiento por inserción, que funciona construyendo una secuencia ordenada de elementos uno por uno
-* int n = arreglo.length; --Obtener la longitud del arreglo para iterar sobre él.
-* for (int i = 1; i < n; i++) {
-Inicia en i = 1: porque el primer elemento se considera ya "ordenado" al inicio.
-Recorre hasta i < n: Para procesar todos los elementos del arreglo.
-* T clave = arreglo[i]; --clave: Es el elemento actual que se insertará en su posición correcta dentro de la parte ya ordenada del arreglo a la izquierda de i.
-* int j = i - 1;
-while (j >= 0 && arreglo[j].compareTo(clave) > 0) { -- la condición while: j >= 0: Evita índices negativos el aarreglo[j].compareTo(clave) > 0: Mueve los elementos mayores una posición a la derecha.
-arreglo[j + 1] = arreglo[j];
-    j--;}
-  j = i - 1: Comienza comparando con el elemento anterior a clave.
-* arreglo[j + 1] = arreglo[j]; -- Desplaza el elemento mayor
-j--;  -- Retrocede para comparar con el siguiente elemento a la izquierda
-* arreglo[j + 1] = clave;
-Cuando el while termina, j + 1 es la posición donde clave debe insertarse (ya no hay elementos mayores a su izquierda).
-7) Monticulos: ![Captura de pantalla 2025-04-09 075343](https://github.com/user-attachments/assets/2fbaf07b-850f-4ac7-ab19-97e50d44af97)
-* El Heap Sort conocido tambien como ordenamiento por montículos es un algoritmo de ordenamiento eficiente que utiliza una estructura de datos llamada heap (montículo)
-* 
+ El elemento en i ahora está ordenado la parte ordenada crece de izquierda a derecha y finaliza.
+
+   ### METODO DE ORDENAMIENTO DE INSERCION:
+   ```java
+   public static <T extends Comparable<T>> void insercion(T[] arreglo) {
+        int n = arreglo.length;
+        for (int i = 1; i < n; i++) {
+            T clave = arreglo[i];
+            int j = i - 1;
+            while (j >= 0 && arreglo[j].compareTo(clave) > 0) {
+                arreglo[j + 1] = arreglo[j];
+                j--;
+            }
+            arreglo[j + 1] = clave;
+        }
+    }
+
+1) Este método implementa el algoritmo de ordenamiento por inserción, que funciona construyendo una secuencia ordenada de elementos uno por uno
+2) **int n = arreglo.length;** Obtiene la longitud del arreglo para iterar sobre él.
+3) **for (int i = 1; i < n; i++) {**
+   Inicia en i = 1: porque el primer elemento se considera ya "ordenado" al inicio.
+   Recorre hasta i < n: Para procesar todos los elementos del arreglo.
+4) **T clave = arreglo[i];**
+   clave: Es el elemento actual que se insertará en su posición correcta dentro de la parte ya ordenada del arreglo a la izquierda de i.
+5) **int j = i - 1;
+while (j >= 0 && arreglo[j].compareTo(clave) > 0) {**
+ la condición while: j >= 0: Evita índices negativos el arreglo[j].compareTo(clave) > 0: Mueve los elementos mayores una posición a la derecha.
+ arreglo[j + 1] = arreglo[j];
+ j--;}
+ j = i - 1: Comienza comparando con el elemento anterior a clave.
+6) **arreglo[j + 1] = arreglo[j];** Desplaza el elemento mayor
+   **j--;**  Retrocede para comparar con el siguiente elemento a la izquierda
+7) **arreglo[j + 1] = clave;**
+Cuando el while termina, j + 1 es la posición donde clave debe insertarse (ya no hay elementos mayores a su izquierda y finaliza)
+
+   ### METODO DE ORDENAMIENTO MONTICULO:
+    ```java
+    public static <T extends Comparable<T>> void monticulos(T[] arreglo) {
+        int n = arreglo.length;
+
+        
+        for (int i = n / 2 - 1; i >= 0; i--) {
+            heapify(arreglo, n, i);
+        }
+
+        
+        for (int i = n - 1; i > 0; i--) {
+            intercambiar(arreglo, 0, i);
+            heapify(arreglo, i, 0);
+        }
+    }
+
+    private static <T extends Comparable<T>> void heapify(T[] arreglo, int n, int i) {
+        int largest = i;
+        int left = 2 * i + 1;
+        int right = 2 * i + 2;
+        if (left < n && arreglo[left].compareTo(arreglo[largest]) > 0) {
+            largest = left;
+        }
+
+        if (right < n && arreglo[right].compareTo(arreglo[largest]) > 0) {
+            largest = right;
+        }
+
+        if (largest != i) {
+            intercambiar(arreglo, i, largest);
+            heapify(arreglo, n, largest);
+        }
+    }
+
+1) El Heap Sort conocido tambien como ordenamiento por montículos es un algoritmo de ordenamiento eficiente que utiliza una estructura de datos llamada heap (montículo)
+2) **for (int i = n / 2 - 1; i >= 0; i--) {
+    heapify(arreglo, n, i);}**
+   Convertiete el arreglo en un montículo máximo (donde el valor de cada nodo padre es mayor o igual que el de sus hijos).
+**i = n / 2 - 1**  Los nodos desde n/2 - 1 hasta 0 son nodos no hoja (los últimos padres en el árbol).
+**Ejemplo:Si n = 6** empezamos en i = 2 (tercer nodo).
+Para cada nodo padre, se llama a **heapify** para asegurar que sea mayor que sus hijos.
+3) **for (int i = n - 1; i > 0; i--) {
+    intercambiar(arreglo, 0, i);
+    heapify(arreglo, i, 0);
+}**
+Intercambio: Mueve el elemento raíz (máximo) al final del arreglo (posición i).
+Ejemplo: Si el arreglo es [10, 5, 3, ...], intercambia 10 con el último elemento.
+Reducción del heap: **heapify(arreglo, i, 0):** Reconstruye el heap con los elementos restantes (i disminuye en cada iteración).
+Resultado:Los elementos máximos se colocan al final uno por uno, dejando el arreglo ordenado.
+
+### Explicación del Método heapify
+        
+        private static <T extends Comparable<T>> void heapify(T[] arreglo, int n, int i) {
+        int largest = i;
+        int left = 2 * i + 1;
+        int right = 2 * i + 2;
+        if (left < n && arreglo[left].compareTo(arreglo[largest]) > 0) {
+            largest = left;
+        }
+
+        if (right < n && arreglo[right].compareTo(arreglo[largest]) > 0) {
+            largest = right;
+        }
+
+        if (largest != i) {
+            intercambiar(arreglo, i, largest);
+            heapify(arreglo, n, largest);
+        }
+    }
+
+**arreglo:** Arreglo a ordenar.
+**n:** Tamaño del heap actual (puede ser menor que el arreglo original).
+**i:** Nodo padre actual.Encontrar el "mayor" entre padre e hijos:
+
+Calcula los índices de los hijos izquierdo **(2*i + 1)** y derecho **(2*i + 2)**.
+Si un hijo es mayor que el padre, actualiza largest.
+**Intercambio y recursión:** Si el mayor no es el padre **(largest != i)** , intercambia los valores.
+Llama a heapify recursivamente en el subárbol afectado (para mantener la propiedad del heap).
+
 
 
 
