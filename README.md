@@ -77,9 +77,7 @@ Esta librería proporciona una colección de algoritmos de ordenamiento implemen
   ### Explicación del código (clases, métodos, variables, validaciones)
 
 1) Creamos un nuevo proyecto del tipo Java Class Library con el nombre **LibreriaOrdenamiento**
-2) ![Captura de pantalla 2025-04-08 164727](https://github.com/user-attachments/assets/2b33dbc2-3593-4c75-98b9-f9ffd5dc864d)
-
-3) dentro de la libreria contiene todos los algoritmos de ordenamiento implementados como métodos **estáticos** y **genéricos** cuando decimos genéricos se refiere a que (<T>): Usa <T extends Comparable<T>> para garantizar que los elementos sean comparables (por ejemplo pueden ser Integer, String, etc.). e inicamos con los metodos de ordenamiento.
+2) dentro de la libreria contiene todos los algoritmos de ordenamiento implementados como métodos **estáticos** y **genéricos** cuando decimos genéricos se refiere a que (<T>): Usa <T extends Comparable<T>> para garantizar que los elementos sean comparables (por ejemplo pueden ser Integer, String, etc.). e inicamos con los metodos de ordenamiento.
    
    ### ORDENAMIENTO POR METODO BURBUJA:
    ```java
@@ -369,10 +367,11 @@ Sobrescribe el elemento en la posición i con el valor del elemento en la posici
     ```bash
      "C:\Program Files\Java\jdk-23\bin\java" -cp "C:\Users\ivone\OneDrive\Documentos\NetBeansProjects\LibreriaOrdenamientos\dist\LibreriaOrdenamientos.jar" PruebaLibreriaOrdenamiento
      
-5)Notas importantes
-El archivo JAR se generó correctamente en la carpeta dist/
-Para distribuir tu librería, solo necesitas compartir el archivo .jar
-El tiempo de compilación fue de solo 3 segundos 
+## Notas importantes
+- El archivo JAR se generó correctamente en la carpeta dist/
+- Para distribuir tu librería, solo necesitas compartir el archivo .jar
+- El tiempo de compilación fue de solo 3 segundos
+  
 ## Importar teniendo ya el .jar generado 
 1) Crea un proyecto nuevo en la pestaña de la superior de tipo Java Application
    - Darle NEXT
@@ -390,13 +389,15 @@ El tiempo de compilación fue de solo 3 segundos
 4) Elegimos `Add JAR/Folder` nos va a dirigir a nuestros documentos desde una ventana en netbeans como sugerencia tenerlo en `Escritorio` ya que es mas facil de localizar , la seleccionamos y se agrega automaticamente a nuestro proyecto creado
 ## Método 2 : Usando NetBeans
    1) Ya creado nuestro .jar una alternativa es que puedes arrastrar el JAR directamente a otros proyectos NetBeans para importarlo fácilmente.
-## Metodo 3: Instalar en repositorio local:
-mvn install:install-file \
-   -Dfile=LibreriaOrdenamiento.jar \
-   -DgroupId=com.milibreria \
-   -DartifactId=ordenamiento \
-   -Dversion=1.0 \
-   -Dpackaging=jar
+
+# Uso del JFrame con el .JAR
+## Acontinuacion Capturas de pantalla con el correcto funcionamiento del.Jar
+- ![image](https://github.com/user-attachments/assets/76f996d2-7031-43e6-bd65-eb0fbb9a453a)
+- Como podemos ver aqui ya tenemos creado nuestro Proyecto de prueba con una respectiva ventana JFrame para probar su uso
+- ![image](https://github.com/user-attachments/assets/2ea40b9f-c471-4ad5-8576-070122738171)
+- Nuestra ventana se ve asi 
+ 
+
    
    
 
