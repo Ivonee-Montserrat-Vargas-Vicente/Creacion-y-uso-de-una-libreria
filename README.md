@@ -392,9 +392,9 @@ Sobrescribe el elemento en la posición i con el valor del elemento en la posici
 
 # Uso del JFrame con el .JAR
 ## Acontinuacion Capturas de pantalla con el correcto funcionamiento del.Jar
-- ![image](https://github.com/user-attachments/assets/76f996d2-7031-43e6-bd65-eb0fbb9a453a)
+ ![image](https://github.com/user-attachments/assets/76f996d2-7031-43e6-bd65-eb0fbb9a453a)
 - Como podemos ver aqui ya tenemos creado nuestro Proyecto de prueba con una respectiva ventana JFrame para probar su uso
-- ![image](https://github.com/user-attachments/assets/2ea40b9f-c471-4ad5-8576-070122738171)
+ ![image](https://github.com/user-attachments/assets/2ea40b9f-c471-4ad5-8576-070122738171)
 - Nuestra ventana se ve asi 
  
 
