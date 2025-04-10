@@ -250,7 +250,17 @@ Si un hijo es mayor que el padre, actualiza largest.
 **Intercambio y recursión:** Si el mayor no es el padre **(largest != i)** , intercambia los valores.
 Llama a heapify recursivamente en el subárbol afectado (para mantener la propiedad del heap).
 
-   ###METODO DE ORDENAMIENTO SHELL:
+         **Ejemplo:**
+Arreglo inicial: **[3, 8, 2, 10, 5]**
+Construir heap máximo:
+resultante: **[10, 8, 2, 3, 5]** (donde 10 es la raíz).
+Extraer máximos: Intercambia 10 y 5 → **[5, 8, 2, 3, 10]** (10 ya está ordenado).
+Re-heapify **[5, 8, 2, 3]** → **[8, 5, 2, 3].**
+Intercambia 8 y 3 → **[3, 5, 2, 8, 10].**
+Repite hasta obtener **[2, 3, 5, 8, 10].**
+
+
+### METODO DE ORDENAMIENTO SHELL:
     ```java
         public static <T extends Comparable<T>> void shell(T[] arreglo) {
         int n = arreglo.length;
@@ -263,11 +273,40 @@ Llama a heapify recursivamente en el subárbol afectado (para mantener la propie
                 }
                 arreglo[j] = temp;
             }
-         }
+        }
     }
-    
-Este método implementa el algoritmo Shell Sort, una optimización del Insertion Sort que compara elementos separados por un "gap" (brecha).
+   
+1) Este método implementa el algoritmo Shell Sort, una optimización del Insertion Sort que compara elementos separados por un "gap" (brecha).
+2) Inicialización
+      **int n = arreglo.length;** Obtiene el tamaño del arreglo para determinar los gaps.
+3) Loop de Gaps (Brechas)
+**for (int gap = n / 2; gap > 0; gap /= 2)**
+gap inicial: **n / 2** (mitad del tamaño del arreglo).
+Iteración: Reduce el gap a la mitad en cada ciclo.
+4) Loop Principal (por cada gap)
+**for (int i = gap; i < n; i++)**
+**i:** Comienza en gap y recorre hasta el final del arreglo , procesa cada elemento en subarreglos definidos por el gap.
+5) Almacenar el Elemento Actual
+**T temp = arreglo[i];**
+**temp:** Guarda el valor del elemento en posición i para compararlo después.
+6) Comparación y Desplazamiento:
+**for (j = i; j >= gap && arreglo[j - gap].compareTo(temp) > 0; j -= gap)**
+Condiciones: j >= gap: Evita índices negativos.
+**arreglo[j - gap] > temp:**  Compara el elemento actual (temp) con el que está a distancia gap.
+Si el elemento a distancia gap es mayor, lo desplaza a la posición j: **arreglo[j] = arreglo[j - gap];**
+7) Insertar el Elemento en su Posición Correcta
+**arreglo[j] = temp;**
+Coloca temp en la posición donde ya no hay elementos mayores anteriores (según el gap actual).
+**Ejemplo:**
+Arreglo inicial: **[12, 34, 54, 2, 3]**
+gap inicial: 5 / 2 = 2
 
+Subarreglos con gap=2: **[12, 54, 3]** y **[34, 2]**
+Ordenamiento por inserción en cada subarreglo: **[3, 12, 54]** y **[2, 34]**
+Arreglo parcial: **[3, 2, 12, 34, 54]**
+gap=1 : Ordena el arreglo completo.
+**Resultado final: [2, 3, 12, 34, 54]**
+ 
 
 
 
