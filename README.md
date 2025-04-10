@@ -395,7 +395,46 @@ Sobrescribe el elemento en la posición i con el valor del elemento en la posici
  ![image](https://github.com/user-attachments/assets/76f996d2-7031-43e6-bd65-eb0fbb9a453a)
 - Como podemos ver aqui ya tenemos creado nuestro Proyecto de prueba con una respectiva ventana JFrame para probar su uso
  ![image](https://github.com/user-attachments/assets/2ea40b9f-c471-4ad5-8576-070122738171)
-- Nuestra ventana se ve asi 
+- Nuestra ventana se ve asi visualmente y usaremos el tipo de dato numerico
+ ![image](https://github.com/user-attachments/assets/5f49d8c5-83a3-483f-b2a5-986e03e6d5db)
+- Primero vamos a declarar:
+- Integer[] numerosBurbuja;  Array para almacenar números 
+- Integer[] numeros;         Array para almacenar números
+  ![image](https://github.com/user-attachments/assets/24dd1807-5164-4c3d-b495-af53c5385fdb)
+- Todo se agrega en el boton  Ordenar
+- Flujo de Ejecución:
+- Obtener entrada de texto:
+  ```java
+  String texto = txtEntrada.getText();
+  Ej: "5, 3, 8"
+- Dividir texto por comas:
+  ```java
+  String[] partes = texto.split(",");  ["5", " 3", " 8"]
+- Convertir a números:
+  ```java
+   Integer[] numeros = new Integer[partes.length];
+   for (int i = 0; i < partes.length; i++) {
+   numeros[i] = Integer.parseInt(partes[i].trim());  
+  }
+- Ordenar con algoritmo burbuja:
+   ```java
+    LibreriaOrdenamiento.burbuja(numeros);  // [5,3,8] → [3,5,8]
+- Mostrar resultado:
+    ```java
+  String resultado = String.join(", ", Arrays.toString(numeros));
+  txtSalida.setText(resultado.replaceAll("[\\[\\]]", ""));
+- Manejo de Errores:
+  ```java
+  try {
+    // Conversión y ordenamiento
+  } catch (NumberFormatException e) {
+    JOptionPane.showMessageDialog(this, 
+        "Error: Ingresa solo números separados por comas.",
+        "Error de formato", 
+        JOptionPane.ERROR_MESSAGE);
+}
+
+
  
 
    
