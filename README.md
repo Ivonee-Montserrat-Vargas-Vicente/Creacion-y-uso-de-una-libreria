@@ -307,6 +307,7 @@ Coloca temp en la posición donde ya no hay elementos mayores anteriores (según
 4) Arreglo parcial: [3, 2, 12, 34, 54]
 5) gap=1 : Ordena el arreglo completo.
 6) Resultado final: [2, 3, 12, 34, 54]
+   Y asi concluye este metodo.
 
    ### METODO DE ORDENAMIENTO INTERCAMBIAR :
     ```java
@@ -323,29 +324,29 @@ Coloca temp en la posición donde ya no hay elementos mayores anteriores (según
     }
 
     
-1) Método intercambiar(T[] arreglo, int i, int j)
+1) Método intercambiar(T[] arreglo, int i, int j):
    **private static <T> void intercambiar(T[] arreglo, int i, int j) {
-    T temp = arreglo[i];  // Paso 1
-    arreglo[i] = arreglo[j];  // Paso 2
-    arreglo[j] = temp;  // Paso 3
-    }**
 Intercambia la posición de dos elementos en un arreglo genérico. Es utilizado por todos los algoritmos de ordenamiento cuando necesitan reordenar elementos.
 2) **T temp = arreglo[i]** Crea una variable temporal temp del tipo genérico T.
 Almacena el valor del elemento en la posición i del arreglo.
-Ejemplo: Si arreglo = **[3, 5, 1]** e i = 0, entonces temp = 3.
+3) Ejemplo: Si arreglo = **[3, 5, 1]** e i = 0, entonces temp = 3.
 **arreglo[i] = arreglo[j]**
 Sobrescribe el elemento en la posición i con el valor del elemento en la posición j.
 
-Ejemplo: Si j = 1 y arreglo[j] = 5, ahora arreglo[0] = 5.
-El arreglo queda: **[5, 5, 1]** (temporalmente).
-**arreglo[j]** = temp
-Asigna el valor original de arreglo[i] (guardado en temp) a la posición j.
-Ejemplo: temp = 3, entonces arreglo[1] = 3.
-
-Resultado final: **[5, 3, 1]**
-
-3) **imprimirArreglo(T[] arreglo)** 
+        EJEMPLO:
+1) Si j = 1 y arreglo[j] = 5, ahora arreglo[0] = 5.
+2) El arreglo queda: **[5, 5, 1]** (temporalmente).
+   **arreglo[j]** = temp
+   Asigna el valor original de arreglo[i] (guardado en temp) a la posición j.
+3) Ejemplo: temp = 3, entonces arreglo[1] = 3.
+4) Resultado final: **[5, 3, 1]**
+5) **imprimirArreglo(T[] arreglo)** 
    Imprime los elementos de un arreglo genérico en la consola, separados por espacios. Útil para depurar o verificar el ordenamiento.
+
+
+
+
+
 
  
 
