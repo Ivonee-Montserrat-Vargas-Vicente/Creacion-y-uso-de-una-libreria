@@ -250,6 +250,24 @@ Si un hijo es mayor que el padre, actualiza largest.
 **Intercambio y recursión:** Si el mayor no es el padre **(largest != i)** , intercambia los valores.
 Llama a heapify recursivamente en el subárbol afectado (para mantener la propiedad del heap).
 
+   ###METODO DE ORDENAMIENTO SHELL:
+    ```java
+        public static <T extends Comparable<T>> void shell(T[] arreglo) {
+        int n = arreglo.length;
+        for (int gap = n / 2; gap > 0; gap /= 2) {
+            for (int i = gap; i < n; i++) {
+                T temp = arreglo[i];
+                int j;
+                for (j = i; j >= gap && arreglo[j - gap].compareTo(temp) > 0; j -= gap) {
+                    arreglo[j] = arreglo[j - gap];
+                }
+                arreglo[j] = temp;
+            }
+         }
+    }
+    
+Este método implementa el algoritmo Shell Sort, una optimización del Insertion Sort que compara elementos separados por un "gap" (brecha).
+
 
 
 
