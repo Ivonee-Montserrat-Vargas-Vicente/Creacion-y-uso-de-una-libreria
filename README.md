@@ -297,15 +297,16 @@ Si el elemento a distancia gap es mayor, lo desplaza a la posición j: **arreglo
 7) Insertar el Elemento en su Posición Correcta
 **arreglo[j] = temp;**
 Coloca temp en la posición donde ya no hay elementos mayores anteriores (según el gap actual).
-**Ejemplo:**
-Arreglo inicial: **[12, 34, 54, 2, 3]**
+
+       **Ejemplo:**
+Arreglo inicial: [12, 34, 54, 2, 3]
 gap inicial: 5 / 2 = 2
 
-Subarreglos con gap=2: **[12, 54, 3]** y **[34, 2]**
-Ordenamiento por inserción en cada subarreglo: **[3, 12, 54]** y **[2, 34]**
-Arreglo parcial: **[3, 2, 12, 34, 54]**
+Subarreglos con gap=2: [12, 54, 3] y [34, 2]
+Ordenamiento por inserción en cada subarreglo: [3, 12, 54] y [2, 34]
+Arreglo parcial: [3, 2, 12, 34, 54]
 gap=1 : Ordena el arreglo completo.
-**Resultado final: [2, 3, 12, 34, 54]**
+Resultado final: [2, 3, 12, 34, 54]
  
 
 
