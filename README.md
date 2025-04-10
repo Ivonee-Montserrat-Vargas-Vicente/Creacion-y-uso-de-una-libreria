@@ -5,7 +5,7 @@ Desarrollar una librería en Java que contenga métodos abstractos. Esta librer�
 El objetivo es aplicar principios de programación orientada a objetos, crear un archivo .jar, documentarlo correctamente y demostrar su uso en otro proyecto.
 
 
----A continuacion breve descripción de la librería y su propósito:---
+# A continuacion breve descripción de la librería y su propósito:
 
 
      DESCRIPCION: 
@@ -433,6 +433,52 @@ Sobrescribe el elemento en la posición i con el valor del elemento en la posici
         "Error de formato", 
         JOptionPane.ERROR_MESSAGE);
 }
+![image](https://github.com/user-attachments/assets/f90506a9-dc8b-4fe6-b77d-3319ab5cad92)
+
+- Lo probamos con este arreglo de numeros: 3,5,8,20,15,1
+![image](https://github.com/user-attachments/assets/e88d27e0-ecff-45d1-9dab-3c84031f88e3)
+- Usando el metodo burbuja nos arroja este resultado
+![image](https://github.com/user-attachments/assets/ec5edddc-9bb4-4ae3-bdb6-4360c07b42a9)
+- Poniendo este caracter nos arroja un cuadro de dialogo
+![image](https://github.com/user-attachments/assets/f8bfcced-15a9-47ff-8fe4-3978e80dda7b)
+## Ahora usaremos el metodo shell pero con letras para la validacion del metodo
+![image](https://github.com/user-attachments/assets/424afd8e-e214-4dad-802e-233eb4e573f7)
+## Tipo de dato cambiado:
+- De Integer[] a Character[] para almacenar letras
+- Validación estricta:
+- Verifica que cada elemento sea exactamente 1 carácter alfabético (Character.isLetter())
+- Rechaza números, símbolos o strings vacíos
+## Mensajes de error claros:
+- Especifica que debe ingresar letras individuales
+- Conversión automática:
+- Convierte cada string a char usando charAt(0)
+![image](https://github.com/user-attachments/assets/335eb425-165b-4120-90c6-82af8dab4e70)
+## Ahora usaremos el metodo seleccion 
+![image](https://github.com/user-attachments/assets/d8446f79-dd86-4d4b-9fb2-9d6bc2a82139)
+- Flujo de Ejecución:
+- Obtener entrada de texto:
+  ```java
+  String texto = txtEntrada.getText();
+  Ej: "4,56,78,12,10"
+- Dividir texto por comas:
+  ```java
+  String[] partes = texto.split(",");  ["4", " 56", " 78", "78","12","10"]
+- Convertir a números:
+  ```java
+   Integer[] numeros = new Integer[partes.length];
+   for (int i = 0; i < partes.length; i++) {
+   numeros[i] = Integer.parseInt(partes[i].trim());  
+  }
+- Ordenar con algoritmo seleccion:
+   ```java
+    LibreriaOrdenamiento.seleccion(numeros);
+![image](https://github.com/user-attachments/assets/094d32da-2a92-45f3-922f-aff79a6aaa71)
+ Y asi con cada uno de los metodos. 
+
+
+
+
+
 
 
  
