@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"lib.metodosdeordenamiento"},{"l":"Metodos_Ordenamiento"}];updateSearchResults();
